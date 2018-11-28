@@ -5,10 +5,10 @@ namespace VehiclesOOP
 {
     public abstract class Vehicle
     {
-        protected string chassisId;
-        protected string brand;
-        protected string model;
-        protected int year;
+        protected string chassisId { get; set; }
+        protected string brand { get; set; }
+        protected string model { get; set; }
+        protected int year { get; set; }
 
         public Vehicle(string  brand, string model, int year)
         {

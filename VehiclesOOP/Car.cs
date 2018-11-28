@@ -8,7 +8,7 @@ namespace VehiclesOOP
 {
     public class Car : Vehicle
     {
-        private string type;
+        private string type { get; set; }
 
         public Car(string brand, string model, int year, string type = "sedan") : base(brand, model, year)
         {
