@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 
 namespace VehiclesOOP
 {
@@ -19,5 +18,10 @@ namespace VehiclesOOP
         }
 
         public String getChassisId() { return chassisId; }
+                
+        public override string ToString()
+        {
+            return "chassisId: " + chassisId + " brand: " + brand + " model: " + model + " year: " + year;
+        } 
     }
 }
