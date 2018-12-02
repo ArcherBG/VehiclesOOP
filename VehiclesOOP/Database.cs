@@ -22,10 +22,14 @@ namespace VehiclesOOP
             return vehicle;
         }
 
+        public Array getAllVehicles()
+        {
+            return vehicles.ToArray();
+        }
+
         public void DeleteVehicle(string chassisId)
         {
             vehicles.Remove(chassisId);
         }
     }
 }
-
