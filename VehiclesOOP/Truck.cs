@@ -12,6 +12,11 @@ namespace VehiclesOOP
             this.isSemiTruck = isSemiTruck;
         }
 
+        public Truck(string chassisId, string brand, string model, int year, bool isSemiTruck = false) : base(chassisId, brand, model, year)
+        {
+            this.isSemiTruck = isSemiTruck;
+        }
+
         public void AttachTrailer()
         {
             if(isTrailerAttached)
@@ -29,7 +34,7 @@ namespace VehiclesOOP
 
         public override string ToString()
         {
-            return base.ToString() + " isSemiTruck: " + isSemiTruck + " isTrailerAttached: " + isTrailerAttached;
+            return base.ToString() + "," + isSemiTruck + "," + isTrailerAttached;
         } 
     }
 }

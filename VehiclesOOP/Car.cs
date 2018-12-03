@@ -14,5 +14,15 @@ namespace VehiclesOOP
         {
             this.type = type;
         }
+
+        public Car(string chassisId, string brand, string model, int year, string type = "sedan") : base(chassisId, brand, model, year)
+        {
+            this.type = type;
+        }
+
+        public override string ToString()
+        {
+            return base.ToString() + "," + type;
+        }
     }
 }

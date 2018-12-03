@@ -17,11 +17,19 @@ namespace VehiclesOOP
             this.year = year;
         }
 
+        public Vehicle(string chassisId, string brand, string model, int year)
+        {
+            this.chassisId = chassisId;
+            this.brand = brand;
+            this.model = model;
+            this.year = year;
+        }
+
         public String getChassisId() { return chassisId; }
                 
         public override string ToString()
         {
-            return "chassisId: " + chassisId + " brand: " + brand + " model: " + model + " year: " + year;
+            return chassisId + "," + brand + "," + model + "," + year;
         } 
     }
 }

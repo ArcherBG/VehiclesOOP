@@ -8,7 +8,7 @@ namespace VehiclesOOP
 {
     public class Database
     {
-        private Dictionary<string, Vehicle> vehicles;
+        private Dictionary<string, Vehicle> vehicles = new Dictionary<string, Vehicle>();
 
         public void addVehicle(Vehicle vehicle)
         {
@@ -24,7 +24,7 @@ namespace VehiclesOOP
 
         public Array getAllVehicles()
         {
-            return vehicles.ToArray();
+            return vehicles.Values.ToArray();
         }
 
         public void DeleteVehicle(string chassisId)
