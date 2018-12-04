@@ -25,6 +25,7 @@ namespace VehiclesOOP
                     Console.WriteLine("7. Sort vehicles by type");
                     Console.Write("Your Input: ");
                     string input = Console.ReadLine();
+                    Console.Write("\n");
 
                     switch (input)
                     {
@@ -76,7 +77,7 @@ namespace VehiclesOOP
                             }
                         case "3":
                             {
-                                Console.WriteLine("Enter chassis id of the seached vehicle");
+                                Console.WriteLine("Enter chassis id of the seached vehicle:");
                                 string chassisId = Console.ReadLine();
                                 Vehicle vehicle = database.getVehicle(chassisId);
                                 if (vehicle != null)
@@ -130,18 +131,30 @@ namespace VehiclesOOP
                             }
                         case "5":
                             {
-                                Console.WriteLine("Enter chassis id of the vehicle you want to delete");
+                                Console.WriteLine("Enter chassis id of the vehicle you want to delete:");
                                 string chassisId = Console.ReadLine();
                                 database.DeleteVehicle(chassisId);
                                 break;
                             }
                         case "6":
                             {
-                                Array vehicles = database.getAllVehicles();
+                                List<Vehicle> vehicles = database.getAllVehicles();
                                 foreach (Vehicle vehicle in vehicles)
                                 {
                                     Console.WriteLine(vehicle.ToString());
                                 }
+                                Console.Write("\n");
+                                break;
+                            }
+                        case "7":
+                            {                                
+                                List<Vehicle> list = database.getAllVehicles();
+                                list.Sort((x, y) => { return string.Compare(x.getChassisId(), y.getChassisId()); });
+                                foreach(Vehicle vehicle in list)
+                                {
+                                    Console.WriteLine(vehicle.ToString());
+                                }
+                                Console.Write("Done \n");
                                 break;
                             }
                         default: { continue; }
@@ -155,4 +168,7 @@ namespace VehiclesOOP
             }
         }
     }
+
+
+
 }

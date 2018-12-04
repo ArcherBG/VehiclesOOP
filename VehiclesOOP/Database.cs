@@ -22,9 +22,9 @@ namespace VehiclesOOP
             return vehicle;
         }
 
-        public Array getAllVehicles()
+        public List<Vehicle> getAllVehicles()
         {
-            return vehicles.Values.ToArray();
+            return vehicles.Values.ToList();
         }
 
         public void DeleteVehicle(string chassisId)

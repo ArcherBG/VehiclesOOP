@@ -25,7 +25,7 @@ namespace VehiclesOOP
             this.year = year;
         }
 
-        public String getChassisId() { return chassisId; }
+        public string getChassisId() { return chassisId; }
                 
         public override string ToString()
         {
